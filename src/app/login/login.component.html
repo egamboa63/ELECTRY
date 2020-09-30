@@ -1,0 +1,59 @@
+<div class="form mb-0 mt-3">
+      
+    <ul class="tab-group">
+      <li class="tab active" *ngIf="inout"><a>Iniciar sesion</a></li>
+      <li class="tab" *ngIf="inout"><a (click)='inout = !inout'>Registrate</a></li>
+      <li class="tab" *ngIf="!inout"><a (click)='inout = !inout' href="#signup">Iniciar sesion</a></li>
+      <li class="tab active" *ngIf="!inout"><a>Registrate</a></li>
+    </ul>
+    
+    <div *ngIf="!inout" class="tab-content" > 
+        <h1>Sign Up for Free</h1>
+        
+        <form action="/" method="post">
+        
+        <div class="top-row">
+          <div class="field-wrap">
+            <input placeholder="First Name" type="text" required autocomplete="off" />
+          </div>
+      
+          <div class="field-wrap">
+            <input placeholder="Last Name" type="text" required autocomplete="off" />
+          </div>
+        </div>
+  
+        <div class="field-wrap">
+          <input placeholder="Email Adress" type="email" required autocomplete="off" />
+        </div>
+        
+        <div class="field-wrap">
+          <input placeholder="Set A Pasword" type="password" required autocomplete="off" />
+        </div>
+        <!--REDIRIGIR A INICIO-->
+        <button (click)="inicio()" type="submit" class="button button-block">Get Started</button>
+        
+        </form>
+      
+        
+    </div><!-- tab-content -->
+    <div *ngIf="inout" class="tab-content" >   
+        <h1>Welcome Back!</h1>
+        
+        <form action="/" method="post">
+        
+          <div class="field-wrap">
+            <input placeholder="Email Adress" type="email" required autocomplete="off" />
+        </div>
+        
+        <div class="field-wrap">
+          <input placeholder="Pasword" type="password" required autocomplete="off" />
+        </div>
+        
+        <p class="forgot"><a href="#">Forgot Password?</a></p>
+        <!--REDIRIGIR A INICIO-->
+        <button (click)="inicio()"  class="button button-block">Log In</button>
+        
+        </form>
+    </div><!-- tab-content -->
+    
+  </div> <!-- /form -->

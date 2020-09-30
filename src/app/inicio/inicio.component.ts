@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { logging } from 'protractor';
 
 @Component({
   selector: 'app-inicio',
@@ -12,4 +13,6 @@ export class InicioComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  pesta = true;
+  
 }
