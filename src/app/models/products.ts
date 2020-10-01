@@ -1,4 +1,5 @@
 export interface Product {
+    FECHA?: number;
     DEMANDA?: number;
-    FECHA?: string;
+    //TIEMPO?:Date;
 }
